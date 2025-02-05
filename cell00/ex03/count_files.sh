@@ -1,1 +1,2 @@
-echo "$(ls -1 | wc -l)$"
+#!/bin/bash
+ls | wc -l
