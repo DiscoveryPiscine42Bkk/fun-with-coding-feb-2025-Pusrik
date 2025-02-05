@@ -1,1 +1,1 @@
-ls | paste -sd ','
+ls -1 | paste -sd ',' -
