@@ -1,8 +1,10 @@
-if [ $# -eq 0 ]; then
-    echo "No arguments supplied"
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	printf "No arguments supplied"
+	exit 1
 else
-    for arg in "$@"; do
-        mkdir "ex${arg}"
-    done
+	for dir in "$@"; do
+		mkdir "ex$dir"
+	done
 fi
-chmod +x build.sh
