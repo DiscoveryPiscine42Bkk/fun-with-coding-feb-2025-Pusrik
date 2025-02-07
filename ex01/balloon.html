@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #balloon {
+            margin-top: 100px;
+            border-radius: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon" onclick="Inflate()" onmouseleave="Shrinks()" >
+    </div>
+    <script>
+        let balloon = document.getElementById("balloon");
+        let backgroundColor = ['red', 'green', 'blue']
+        let Index = 0;
+        let size = 200;
+        let radius = 100;
+
+        function Inflate() {
+            if (Index == 2) {
+                Index = 0;
+            } else {
+                Index += 1;
+            }
+
+            balloon.style.backgroundColor = backgroundColor[Index];
+
+            if (parseInt(balloon.style.width) >= 415) {
+                size = 200;
+                radius = 100;
+                balloon.style.width = size + "px";
+                balloon.style.height = size + "px";
+                balloon.style.borderRadius = radius + "px";
+            } else {
+                size += 10;
+                radius += 10;
+                balloon.style.width = size + "px";
+                balloon.style.height = size + "px";
+                balloon.style.borderRadius = radius + "px";
+            }
+        }
+
+        function Shrinks() {
+            if (Index == 0) {
+                Index = 2;
+            } else {
+                Index -= 1;
+            }
+
+            balloon.style.backgroundColor = backgroundColor[Index];
+
+            if (parseInt(balloon.style.width) <= 200) {
+                size = 200;
+                radius = 100;
+                balloon.style.width = size + "px";
+                balloon.style.height = size + "px";
+                balloon.style.borderRadius = radius + "px";
+            } else {
+                size -= 5;
+                radius -= 5;
+                balloon.style.width = size + "px";
+                balloon.style.height = size + "px";
+                balloon.style.borderRadius = radius + "px";
+            }
+        }
+    </script>
+</body>
+</html>
