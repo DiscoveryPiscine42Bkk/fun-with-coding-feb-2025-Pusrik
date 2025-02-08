@@ -41,11 +41,12 @@
                 let operation = $("#option").val();
                 if (fnum < 0 || snum < 0 || isNaN(fnum) || isNaN(snum) || !(Number.isInteger(snum)) || !(Number.isInteger(fnum))) {
                     alert("’Error :(’.");
+                    console.log("’Error :(’.");
                 } 
                 else if ((operation == "/" || operation == "%") && snum == 0) {
                     let result = `${fnum}${operation}${snum}`;
                     alert("\"It’s over 9000!\"." );
-                    console.log(result);
+                    console.log("\"It’s over 9000!\".");
                 }
                 else {
                     let result = `${fnum}${operation}${snum}`;
