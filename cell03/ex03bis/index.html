@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="todo.js"></script>
+    <title>Document</title>
+    <style>
+        .container {
+            display:block;
+            border: solid 5px darkgray;
+            max-width: 50%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 800px;
+            background-color: wheat;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            padding: 15px 15px;
+            font-size: 18px;
+        }
+        #ft_list {
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+            align-items: center;
+        }
+
+        #ft_list > p {
+            width: 80%;
+            margin-top: 1px;
+            font-size: 24px;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <div id="ft_list">
+        </div>
+        <br>
+        <button>New</button>
+    </div>
+</body>
+</html>
